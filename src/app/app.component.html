@@ -2,6 +2,6 @@
   title: title$ | async
 } as _">
   <h1>{{_.title}}</h1>
-  <input type="text" pInputText [(ngModel)]="newTitle" placeholder="Change title" />
-  <p-button pButton (onClick)="updateTitle()" size="small">Update</p-button>
+  <input type="text" pInputText [(ngModel)]="newTitle" [placeholder]="'app.title.placeholder' | translate" />
+  <p-button pButton (onClick)="updateTitle()" size="small">{{ 'app.update' | translate }}</p-button>
 </ng-container>

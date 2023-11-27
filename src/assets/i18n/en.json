@@ -1,0 +1,8 @@
+{
+    "app": {
+        "update": "update",
+        "title": {
+            "placeholder": "Change title"
+        }
+    }
+}

@@ -1,6 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// translate
+import {
+  TranslateLoader,
+  TranslateModule,
+  TranslateStore,
+} from '@ngx-translate/core';
+import { MultiTranslateHttpLoader } from 'ngx-translate-multi-http-loader';
+
 //ngrx
 import { StoreModule } from '@ngrx/store';
 
@@ -15,6 +23,12 @@ import { FormsModule } from '@angular/forms';
 // primeng
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
+function translateHttpLoaderFactory(httpBackend: HttpClient) {
+  return new TranslateHttpLoader(httpBackend);
+}
 
 @NgModule({
   declarations: [AppComponent],
@@ -27,8 +41,17 @@ import { ButtonModule } from 'primeng/button';
     InputTextModule,
     ButtonModule,
     FormsModule,
+    TranslateModule.forRoot({
+      defaultLanguage: 'en',
+      loader: {
+        provide: TranslateLoader,
+        useFactory: translateHttpLoaderFactory,
+        deps: [HttpClient],
+      },
+    }),
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [TranslateStore],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
