@@ -8,7 +8,8 @@ export interface AppGlobalDataStateUi {
 export const initialState: AppGlobalDataStateUi = {
   title: 'DEMO',
   navigation: [
-    { label: 'Maze Generator', imageUrl: '' },
-    { label: 'Pokedex', imageUrl: '' },
+    { label: 'app.navigation.settings' },
+    { label: 'app.navigation.maze' },
+    { label: 'app.navigation.pokedex' },
   ],
 };

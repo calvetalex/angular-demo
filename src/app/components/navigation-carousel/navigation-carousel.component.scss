@@ -1,0 +1,18 @@
+::ng-deep {
+  body .p-component.p-carousel.p-carousel-horizontal,
+  body .p-component.p-carousel.p-carousel-horizontal .p-carousel-content,
+  body
+    .p-component.p-carousel.p-carousel-horizontal
+    .p-carousel-content
+    .p-carousel-container {
+    height: 100%;
+  }
+  .p-hide-paginator {
+    .p-carousel-indicators {
+      display: none !important;
+    }
+  }
+  .navigation {
+    text-align: center;
+  }
+}

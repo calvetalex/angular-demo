@@ -1,0 +1,12 @@
+<ng-container *ngIf="{ navigationItems: navigationItems$ | async } as _">
+    <p-carousel class="p-hide-paginator navigation" [value]="_.navigationItems ?? []" [numVisible]="4" [numScroll]="1">
+        <ng-template let-item pTemplate="item">
+            <div class="border-1 surface-border border-round m-2 text-center py-5 px-3">
+                <div>
+                    <p-button type="button" [label]="item.label | translate" severity="secondary" [rounded]="true" size="small"></p-button>
+                </div>
+            </div>
+        </ng-template>
+    </p-carousel>
+    
+</ng-container>
