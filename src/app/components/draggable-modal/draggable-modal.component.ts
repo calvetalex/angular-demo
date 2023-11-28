@@ -26,7 +26,9 @@ export class DraggableModalComponent {
 
   @Output() visibleChange: EventEmitter<boolean> = new EventEmitter<boolean>();
 
-  @ContentChild('body', { static: true }) body: TemplateRef<any> | undefined;
+  @ContentChild('body', { static: true }) body:
+    | TemplateRef<HTMLElement>
+    | undefined;
 
   @ViewChild('draggableModal') draggableModal: Dialog | undefined;
 
