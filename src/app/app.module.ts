@@ -7,7 +7,6 @@ import {
   TranslateModule,
   TranslateStore,
 } from '@ngx-translate/core';
-import { MultiTranslateHttpLoader } from 'ngx-translate-multi-http-loader';
 
 //ngrx
 import { StoreModule } from '@ngrx/store';

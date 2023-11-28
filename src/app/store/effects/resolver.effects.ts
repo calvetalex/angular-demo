@@ -10,7 +10,7 @@ export class Effects {
   reset$ = createEffect(() =>
     this._actions.pipe(
       ofType(ResolverActions.µResolve),
-      switchMap((_) => [ApiActions.µClear(), UiActions.µClear()])
+      switchMap(() => [ApiActions.µClear(), UiActions.µClear()])
     )
   );
 }
