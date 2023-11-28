@@ -1,0 +1,7 @@
+<p-dialog [header]="header" [(visible)]="visible" [position]="position" [style]="style" (onHide)="onDraggableModalClose()">
+    <ng-container [ngTemplateOutlet]="body || bodyDefault"></ng-container>
+</p-dialog>
+
+<ng-template #bodyDefault>
+    <span>{{ 'app.no-template' | translate }}</span>
+</ng-template>

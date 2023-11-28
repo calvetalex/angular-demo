@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import { Store, select } from '@ngrx/store';
-import { $appTitle } from './store/selectors/ui/app.selector';
-import { µUpdateTitle } from './store/actions/ui/app.actions';
+import { DIRECTION } from './models/draggable-modal.models';
 
 @Component({
   selector: 'app-root',
@@ -9,13 +7,17 @@ import { µUpdateTitle } from './store/actions/ui/app.actions';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title$ = this.store.pipe(select($appTitle));
-  newTitle: string = '';
+  visible: boolean = false;
+  visibleEmpty: boolean = false;
+  DIRECTION = DIRECTION;
 
-  constructor(private readonly store: Store<Record<string, unknown>>) {}
+  constructor() {}
 
-  updateTitle() {
-    if (!this.newTitle) return;
-    this.store.dispatch(µUpdateTitle({ title: this.newTitle }));
+  showDialog() {
+    this.visible = true;
+  }
+
+  showEmptyDialog() {
+    this.visibleEmpty = true;
   }
 }
