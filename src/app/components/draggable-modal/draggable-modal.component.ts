@@ -5,9 +5,7 @@ import {
   ContentChild,
   TemplateRef,
   EventEmitter,
-  ViewChild,
 } from '@angular/core';
-import { Dialog } from 'primeng/dialog';
 import {
   DIRECTION,
   DefaultObject,
