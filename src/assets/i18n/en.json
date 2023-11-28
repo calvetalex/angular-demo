@@ -3,6 +3,7 @@
         "update": "update",
         "title": {
             "placeholder": "Change title"
-        }
+        },
+        "no-template": "No body to display"
     }
 }

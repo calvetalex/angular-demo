@@ -19,10 +19,14 @@ import { reducers } from './store/reducers';
 import { EffectsModule } from '@ngrx/effects';
 import { Effects } from './store/effects';
 import { FormsModule } from '@angular/forms';
+import { DraggableModalComponent } from './components/draggable-modal/draggable-modal.component';
 
 // primeng
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
+import { DialogModule } from 'primeng/dialog';
+
+// i18n
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
@@ -31,7 +35,7 @@ function translateHttpLoaderFactory(httpBackend: HttpClient) {
 }
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, DraggableModalComponent],
   imports: [
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -50,6 +54,7 @@ function translateHttpLoaderFactory(httpBackend: HttpClient) {
       },
     }),
     HttpClientModule,
+    DialogModule,
   ],
   providers: [TranslateStore],
   bootstrap: [AppComponent],
