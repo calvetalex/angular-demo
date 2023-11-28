@@ -30,8 +30,6 @@ export class DraggableModalComponent {
     | TemplateRef<HTMLElement>
     | undefined;
 
-  @ViewChild('draggableModal') draggableModal: Dialog | undefined;
-
   constructor() {}
 
   onDraggableModalClose() {
