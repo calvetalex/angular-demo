@@ -1,8 +1,10 @@
 {
     "app": {
-        "update": "update",
-        "title": {
-            "placeholder": "Change title"
+        "navigation": {
+            "image-alt": "Item Icon",
+            "settings": "Settings",
+            "maze": "Maze Generator",
+            "pokedex": "Pokedex"
         },
         "no-template": "No body to display"
     }

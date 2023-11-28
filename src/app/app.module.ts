@@ -19,11 +19,16 @@ import { EffectsModule } from '@ngrx/effects';
 import { Effects } from './store/effects';
 import { FormsModule } from '@angular/forms';
 import { DraggableModalComponent } from './components/draggable-modal/draggable-modal.component';
+import { TaskbarComponent } from './container/taskbar/taskbar.container';
+import { BodyComponent } from './container/body/body.container';
+import { NavigationCarouselComponent } from './components/navigation-carousel/navigation-carousel.component';
 
 // primeng
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { DialogModule } from 'primeng/dialog';
+import { CarouselModule } from 'primeng/carousel';
+import { TagModule } from 'primeng/tag';
 
 // i18n
 import { HttpClient, HttpClientModule } from '@angular/common/http';
@@ -34,7 +39,13 @@ function translateHttpLoaderFactory(httpBackend: HttpClient) {
 }
 
 @NgModule({
-  declarations: [AppComponent, DraggableModalComponent],
+  declarations: [
+    AppComponent,
+    DraggableModalComponent,
+    TaskbarComponent,
+    BodyComponent,
+    NavigationCarouselComponent,
+  ],
   imports: [
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -54,6 +65,8 @@ function translateHttpLoaderFactory(httpBackend: HttpClient) {
     }),
     HttpClientModule,
     DialogModule,
+    CarouselModule,
+    TagModule,
   ],
   providers: [TranslateStore],
   bootstrap: [AppComponent],

@@ -1,10 +1,4 @@
 <ng-container>
-  <p-button pButton (onClick)="showEmptyDialog()" size="small">empty</p-button>
-  <p-button pButton (onClick)="showDialog()" size="small">full</p-button>
-  <app-draggable-modal [(visible)]="visibleEmpty" [header]="'test empty'" [position]="DIRECTION.TOP"></app-draggable-modal>
-  <app-draggable-modal [(visible)]="visible" [header]="'test'" [position]="DIRECTION.BOTTOM_LEFT">
-    <ng-template #body>
-      This is the body
-    </ng-template>
-  </app-draggable-modal>
+  <app-body></app-body>
+  <app-taskbar></app-taskbar>
 </ng-container>
